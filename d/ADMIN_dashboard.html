@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Welcome to the Dashboard!</h1>
+  <button onclick="logout()">Log out</button>
+
+  <script>
+    // Check if the user is logged in, else redirect to login page
+    if (localStorage.getItem('loggedIn') !== 'true') {
+      alert('You must log in first.');
+      window.location.href = 'login.html'; // Correct path
+    }
+  
+    // Log out function
+    function logout() {
+      localStorage.removeItem('loggedIn');
+      window.location.href = 'login.html'; // Correct path
+    }
+  </script>
+  
+</body>
+</html>
